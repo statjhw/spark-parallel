@@ -1,8 +1,6 @@
 services:
   spark-master:
-    build:
-      context: .
-      dockerfile: docker/spark/Dockerfile
+    image: spark-parallel:latest
     container_name: spark-master
     ports:
       - "8080:8080"
@@ -19,9 +17,7 @@ services:
       - spark-net
 
   spark-worker-1:
-    build:
-      context: .
-      dockerfile: docker/spark/Dockerfile
+    image: spark-parallel:latest
     container_name: spark-worker-1
     depends_on:
       - spark-master
@@ -40,9 +36,7 @@ services:
       - spark-net
 
   spark-worker-2:
-    build:
-      context: .
-      dockerfile: docker/spark/Dockerfile
+    image: spark-parallel:latest
     container_name: spark-worker-2
     depends_on:
       - spark-master
@@ -61,9 +55,7 @@ services:
       - spark-net
 
   spark-app:
-    build:
-      context: .
-      dockerfile: docker/spark/Dockerfile
+    image: spark-parallel:latest
     container_name: spark-app
     depends_on:
       - spark-master
