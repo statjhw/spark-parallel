@@ -6,6 +6,10 @@ __pycache__/
 .claude/
 CLAUDE.md
 
+# JAR files (too large for GitHub)
+jars/
+*.jar
+
 # C extensions
 *.so
 

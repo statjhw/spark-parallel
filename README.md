@@ -97,6 +97,12 @@ AWS_DEFAULT_REGION=us-east-1
 
 ### 3. 플랫폼 시작
 
+**jar 파일을 필수적으로 업로드해야 합니다** 
+```bash
+# JAR 파일 다운로드
+./download_jars.sh
+```
+
 ```bash
 # 전체 Spark 생태계 시작
 ./run.sh up
