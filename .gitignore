@@ -9,6 +9,7 @@ CLAUDE.md
 # JAR files (too large for GitHub)
 jars/
 *.jar
+jars/*.jar
 
 # C extensions
 *.so
