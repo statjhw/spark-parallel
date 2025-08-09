@@ -1,11 +1,11 @@
 # Spark 병렬 분석 플랫폼
 
-[![Apache Spark](https://img.shields.io/badge/Apache%20Spark-3.4.0-E25A1C?style=for-the-badge&logo=apache-spark&logoColor=white)](https://spark.apache.org/)
-[![Google BigQuery](https://img.shields.io/badge/BigQuery-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/bigquery)
-[![Amazon S3](https://img.shields.io/badge/Amazon%20S3-569A31?style=for-the-badge&logo=amazon-s3&logoColor=white)](https://aws.amazon.com/s3/)
-[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://docker.com/)
-[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org/)
-[![PySpark](https://img.shields.io/badge/PySpark-E25A1C?style=for-the-badge&logo=apache-spark&logoColor=white)](https://spark.apache.org/docs/latest/api/python/)
+[![Apache Spark](https://img.shields.io/badge/Apache%20Spark-3.4.0-E25A1C.svg?style=flat&logo=apache-spark&logoColor=white)](https://spark.apache.org/)
+[![Google BigQuery](https://img.shields.io/badge/BigQuery-Latest-4285F4.svg?style=flat&logo=google-cloud&logoColor=white)](https://cloud.google.com/bigquery)
+[![Amazon S3](https://img.shields.io/badge/Amazon%20S3-Latest-569A31.svg?style=flat&logo=amazon-s3&logoColor=white)](https://aws.amazon.com/s3/)
+[![Docker](https://img.shields.io/badge/Docker-Latest-2496ED.svg?style=flat&logo=docker&logoColor=white)](https://docker.com/)
+[![Python](https://img.shields.io/badge/Python-3.9+-3776AB.svg?style=flat&logo=python&logoColor=white)](https://python.org/)
+[![PySpark](https://img.shields.io/badge/PySpark-3.4.0-E25A1C.svg?style=flat&logo=apache-spark&logoColor=white)](https://spark.apache.org/docs/latest/api/python/)
 
 > 🚀 ** 도커 환경에서 분산 데이터 처리 ** - 대규모 데이터 처리를 위한 Apache Spark 분산 환경 실험과 클라우드 통합
 
