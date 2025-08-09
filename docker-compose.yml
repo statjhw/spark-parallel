@@ -1,0 +1,84 @@
+services:
+  spark-master:
+    build:
+      context: .
+      dockerfile: docker/spark/Dockerfile
+    container_name: spark-master
+    ports:
+      - "8080:8080"
+      - "7077:7077"
+    volumes:
+      - ./.secrets:/secrets:ro
+      - ./jars:/jars:ro  # JAR 파일 마운트
+    environment:
+      - SPARK_MODE=master
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+    networks:
+      - spark-net
+
+  spark-worker-1:
+    build:
+      context: .
+      dockerfile: docker/spark/Dockerfile
+    container_name: spark-worker-1
+    depends_on:
+      - spark-master
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./.secrets:/secrets:ro
+      - ./jars:/jars:ro  # JAR 파일 마운트
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+    networks:
+      - spark-net
+
+  spark-worker-2:
+    build:
+      context: .
+      dockerfile: docker/spark/Dockerfile
+    container_name: spark-worker-2
+    depends_on:
+      - spark-master
+    ports:
+      - "8082:8081"
+    volumes:
+      - ./.secrets:/secrets:ro
+      - ./jars:/jars:ro  # JAR 파일 마운트
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+    networks:
+      - spark-net
+
+  spark-app:
+    build:
+      context: .
+      dockerfile: docker/spark/Dockerfile
+    container_name: spark-app
+    depends_on:
+      - spark-master
+    volumes:
+      - ./src:/app
+      - ./.secrets:/secrets:ro
+      - ./jars:/jars:ro  # JAR 파일 마운트
+    command:
+      - spark-submit
+      - --jars
+      - /jars/spark-bigquery-with-dependencies_2.12-0.34.0.jar,/jars/hadoop-aws-3.3.4.jar,/jars/aws-java-sdk-bundle-1.12.262.jar
+      - /app/spark.py
+    networks:
+      - spark-net
+
+networks:
+  spark-net:
+    driver: bridge
