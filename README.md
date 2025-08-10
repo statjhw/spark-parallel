@@ -7,7 +7,7 @@
 [![Python](https://img.shields.io/badge/Python-3.9+-3776AB.svg?style=flat&logo=python&logoColor=white)](https://python.org/)
 [![PySpark](https://img.shields.io/badge/PySpark-3.4.0-E25A1C.svg?style=flat&logo=apache-spark&logoColor=white)](https://spark.apache.org/docs/latest/api/python/)
 
-> 🚀 ** 도커 환경에서 분산 데이터 처리 ** - 대규모 데이터 처리를 위한 Apache Spark 분산 환경 실험과 클라우드 통합
+> 🚀 ** 도커 환경에서 데이터 분산 처리 ** - 대규모 데이터 처리를 위한 Apache Spark 분산 환경 실험과 클라우드 통합
 
 ## 🌟 프로젝트 개요
 
