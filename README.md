@@ -171,13 +171,6 @@ spark-worker-3:
 - `gcs-connector-3.0.9-shaded.jar`
 - `hadoop-aws-3.3.4.jar` (향상된 S3 지원용)
 
-## 🛡️ 보안 기능
-
-- **Zero-Trust 인증**: 서비스 계정 키 로테이션
-- **암호화된 전송**: 모든 클라우드 통신을 위한 TLS/SSL
-- **컨테이너 격리**: 샌드박스 실행 환경
-- **자격 증명 관리**: 환경 기반 비밀 주입
-
 ## 📈 모니터링 및 관측성
 
 - **Spark Master UI**: http://localhost:8080 - 클러스터 개요
